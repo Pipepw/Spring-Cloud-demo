@@ -16,7 +16,7 @@ hosts文件路径：`C:\Windows\System32\drivers\etc`
 127.0.0.1 eureka7001.com
 127.0.0.1 eureka7002.com
 127.0.0.1 eureka7003.com
-
+127.0.0.1 config-3344.com
 ```
 
 ## 1.2数据库 ##
@@ -123,7 +123,26 @@ Eureka服务提供方(集群)
 监控消费方的指标(性能)
 
 - microservicecloud-consumer-hystrix-dashboard
-- 
+
+
+使用方式：
+
+- 启动consumer-hystrix-dashboard项目，打开`http://localhost:9001/hystrix.stream`
+
+
+![](https://i.imgur.com/yoDFMHg.png)
+
+我们可以监控：`microservicecloud-provider-dept-hystrix-8001`这个项目，于是在输入栏输入`http://localhost:8001/hystrix.stream`
+
+![](https://i.imgur.com/pBhQJkD.png)
+
+随后，我们去测试接口：`http://localhost:8001/dept/get/7`
+
+
+监控的数据就会变化了：
+
+![](https://i.imgur.com/ITs9WPS.png)
+
 
 
 ## 2.4网关 ##
@@ -133,9 +152,50 @@ Eureka服务提供方(集群)
 
 - microservicecloud-zuul-gateway-9527
 
+## 2.5Cloud配置文件 ##
+
+
+git脚本回顾：
+
+```git
+
+1. git init //初始化仓库
+
+2. git add .(文件name) //添加文件到本地仓库
+
+3. git commit -m "first commit" //添加文件描述信息
+
+4. git remote add origin + 远程仓库地址 //链接远程仓库，创建主分支
+
+5. git pull origin master --allow-unrelated-histories  // 把本地仓库的变化连接到远程仓库主分支
+
+6. git push -u origin master //把本地仓库的文件推送到远程仓库
+
+
+```
+
+SpringCloud Config服务端(获取配置都从这里来拿)
+
+- microservicecloud-config-3344
+
+
+SpringCloud Config 客户端：
+
+- microservicecloud-config-client-3355
+- microservicecloud-config-dept-client-8001
+- microservicecloud-config-eureka-client-7001
+
+
+
 
 ## 2.6tip ##
 
 如果使用的是IDEA的话，使用 Run dashboard比较方便~
 
 ![](https://i.imgur.com/CgrUIwL.png)
+
+# 最后 #
+
+获取更多**原创文章**，公众号：Java3y
+
+
