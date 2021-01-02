@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="cloudDB01@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.17">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
     </root>
     <schema id="2" parent="1" name="clouddb01">
       <Current>1</Current>
-      <Visible>1</Visible>
       <Collation>latin1_swedish_ci</Collation>
     </schema>
     <schema id="3" parent="1" name="clouddb02">
@@ -920,18 +919,18 @@
     </table>
     <column id="232" parent="231" name="deptno">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="233" parent="231" name="dname">
       <Position>2</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="234" parent="231" name="db_source">
       <Position>3</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="235" parent="231" name="PRIMARY">

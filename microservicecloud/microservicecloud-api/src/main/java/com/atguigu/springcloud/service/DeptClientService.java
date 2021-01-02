@@ -1,7 +1,7 @@
 package com.atguigu.springcloud.service;
 
 import com.atguigu.springcloud.entities.Dept;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
