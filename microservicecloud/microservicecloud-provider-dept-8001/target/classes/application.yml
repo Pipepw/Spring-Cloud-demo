@@ -12,8 +12,8 @@ spring:
     name: microservicecloud-dept # 应用名称
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
-    driver-class-name: com.mysql.jdbc.Driver              # mysql驱动包
-    url: jdbc:mysql://localhost:3306/cloudDB01              # 数据库名称
+    driver-class-name: com.mysql.cj.jdbc.Driver              # mysql驱动包
+    url: jdbc:mysql://localhost:3306/cloudDB01?characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai              # 数据库名称
     username: root
     password: root
     dbcp2:
@@ -38,3 +38,9 @@ info: # 在eureka中可以点击info链接，显示有值。链接后的内容�
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+#暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "hystrix.stream"
