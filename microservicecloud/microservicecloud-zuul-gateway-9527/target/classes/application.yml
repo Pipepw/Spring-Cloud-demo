@@ -8,7 +8,7 @@ spring:
 eureka: 
   client: 
     service-url: 
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+      defaultZone: http://eureka7001:7001/eureka,http://eureka7002:7002/eureka,http://eureka7003:7003/eureka
   instance:
     instance-id: gateway-9527.com
     prefer-ip-address: true 
@@ -25,7 +25,7 @@ zuul:
     mydept.path: /mydept/**
  
 info:
-  app.name: atguigu-microcloud
+  app.name: java3y-microcloud
   company.name: www.java3y.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$

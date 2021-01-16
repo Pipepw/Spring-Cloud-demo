@@ -4,13 +4,13 @@
 
 <mapper namespace="com.atguigu.springcloud.dao.DeptDao">
 
-	<select id="findById" resultType="Dept" parameterType="Long">
+	<select id="findById" resultType="com.atguigu.springcloud.entities.Dept" parameterType="Long">
 		select deptno,dname,db_source from dept where deptno=#{deptno};
 	</select>
-	<select id="findAll" resultType="Dept">
+	<select id="findAll" resultType="com.atguigu.springcloud.entities.Dept">
 		select deptno,dname,db_source from dept;
 	</select>
-	<insert id="addDept" parameterType="Dept">
+	<insert id="addDept" parameterType="com.atguigu.springcloud.entities.Dept">
 		INSERT INTO dept(dname,db_source) VALUES(#{dname},DATABASE());
 	</insert>
 

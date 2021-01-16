@@ -15,7 +15,7 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://localhost:3306/cloudDB01
     username: root
-    password: 123456
+    password: root
     dbcp2:
       min-idle: 5
       initial-size: 5
@@ -33,8 +33,8 @@ eureka:
 info:
   app.name: java3y-microservicecloud
   company.name: www.java3y.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build.artifactId: microservicecloud-provider-dept-hystrix-8001
+  build.version: 0.0.1-SNAPSHOT
       
       
       
